@@ -1,0 +1,18 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script type="text/javascript">
+        function geolocate() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var geolocation = new google.maps.LatLng
+                        (position.coords.latitude, position.coords.longitude);
+                    //alert(position.coords.latitude + " "+position.coords.longitude);
+                    var longitude = position.coords.longitude;
+                    var lattitude = position.coords.latitude;
+                    var fd = new FormData();
+                    fd.append("Longitude", position.coords.longitude);
+                    fd.append("Lattitude", position.coords.latitude);
+
+                });
+            }
+        }
+    </script>
